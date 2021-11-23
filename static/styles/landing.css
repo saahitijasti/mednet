@@ -1,0 +1,50 @@
+.topbar {
+    background-color: white;
+    height: 70;
+    width: 100%;
+}
+
+.content {
+    background-color: #E2EDF3;
+    height: 100%;
+    width: 100%;
+    /*padding: 50px 50px 50px 50px;*/
+}
+
+.inner-content {
+    padding-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    height: 100%;
+    background-color: #E2EDF3;
+}
+
+.space-evenly {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile {
+    width: 300px;
+    height: 456;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: 7D7D7D;
+    border-radius: 5;
+}
+
+.feed {
+    width: 556px;
+    height: 100%;
+    border-width: 1px;
+    border-color: 7D7D7D;
+    border-radius: 5;
+    background-color: white;
+}
+
+.schedule {
+    width: 307px;
+    height: 237px;
+    background-color: white;
+}
