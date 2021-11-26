@@ -2,11 +2,10 @@
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/landing.css') }}">
 
 <body>
-
     <div class="topbar space-evenly">
         <div id="topbar-left">
             <img src="/static/images/logo.png">
-            <input type="text" placeholder="Search..">
+            <input type="text" placeholder="Search.." class="grey-box">
         </div>
         <div id="topbar-right">
             <img src="/static/images/network.png">
@@ -16,11 +15,51 @@
 
     <div class="content">
         <div class="inner-content space-evenly">
-            <div class="profile">
-                Profile
+            <div class="box profile">
+                <div class="inner-profile">
+                    <img src="/static/images/profile.png" width="100">
+                    <div class="title-font"> Rubella Jones</div>
+                    <img src="/static/images/25complete.png">
+                    <hr class="hline">
+                    <div>
+                        <b>connections</b>
+                        <div class="space-evenly connection" id="friends">
+                            <div class="friends-left">
+                                <img src="/static/images/heart.png">
+                                friends
+                            </div>
+                            <div class="friends-right">
+                                251
+                            </div>
+                        </div>
+                        <div class="space-evenly connection" id="doctors">
+                            <div class="doctors-left">
+                                <img src="/static/images/plus.png">
+                                doctors
+                            </div>
+                            <div class="friends-right">
+                                17
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hline">
+                    <b>groups</b>
+                    <p class="group">
+                        WOC &bull; South Asian &bull; Anxiety &bull; Student &bull; New York
+                    </p>
+                </div>
             </div>
             <div class="feed">
-                feed
+                <div class="box write-post">
+                    <div class="space-evenly">
+                        <img src="/static/images/grey_profile.png">
+                        <input type="text" placeholder="write a post" class="grey-box write-post-box">
+                    </div>
+                </div>
+                <hr class="hline">
+                <div class="box write-post">
+
+                </div>
             </div>
             <div class="schedule">
                 schedule
