@@ -45,4 +45,8 @@ def addnewuser():
 def landing():
     return render_template("landing.html", posts=posts, doctors=doctors)
 
+@app.route('/doctor_matches')
+def doctor_matches():
+    return render_template("doctor_matches.html", doctors=doctors)
+
 
