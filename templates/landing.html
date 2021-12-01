@@ -7,9 +7,17 @@
             <img src="/static/images/logo.png">
             <input type="text" placeholder="Search.." class="grey-box">
         </div>
-        <div id="topbar-right">
-            <img src="/static/images/network.png">
-            <img src="/static/images/profile.png">
+        <div id="topbar-right" class="space-evenly">
+            <div class="network">
+                <img src="/static/images/network.png">
+                <br>
+                <div class="small-font">Network</div>
+            </div>
+            <div class="profile-top-bar">
+                <img src="/static/images/profile.png">
+                <br>
+                <div class="small-font">Profile</div>
+            </div>
         </div>
     </div>
 
@@ -51,18 +59,63 @@
             </div>
             <div class="feed">
                 <div class="box write-post">
-                    <div class="space-evenly">
+                    <div class="space-evenly inner-post">
                         <img src="/static/images/grey_profile.png">
                         <input type="text" placeholder="write a post" class="grey-box write-post-box">
                     </div>
                 </div>
                 <hr class="hline">
-                <div class="box write-post">
-
+                {% for post in posts %}
+                <div class="box">
+                    <div class="author">
+                        <img src="/static/images/grey_profile.png">
+                        <div>{{post.name}}</div>
+                        &bull;
+                        {% for att in post.attributes %}
+                            <div class="post-attributes"> {{att}} &bull; </div>
+                        {% endfor %}
+                        <div class="post-connection">{{post.connection}}</div>
+                    </div>
+                    <hr class="hline">
+                    <div>{{post.text}}</div>
+                    {% if "link" in post %}
+                        <div id="link" class="box link space-evenly">
+                            <div class="link-left space-evenly">
+                                <img src="/static/images/grey_profile.png">
+                                <div>
+                                    <div>{{post.link}}</div>
+                                    <div class="link-info">
+                                        <img src="/static/images/heart.png">
+                                        <div>{{doctors[post.link].mutual_friends}} mutual friends</div>
+                                    </div>
+                                    <div class="link-info">
+                                        <img src="/static/images/plus.png">
+                                        <div>{{doctors[post.link].mutual_doctors}} mutual doctors</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="link-right">
+                                {% for att in doctors[post.link].attributes %}
+                                <div class="link-attribute">
+                                    <img src="/static/images/{{att}}.png">
+                                    <div>{{att}}</div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                    <hr class="hline">
+                    <div class="post-bottom">
+                        <img src="/static/images/like.png">
+                        <img src="/static/images/comment.png">
+                        <img src="/static/images/reshare.png">
+                    </div>
                 </div>
+                <br>
+                {% endfor %}
             </div>
             <div class="schedule">
-                schedule
+                <img src="/static/images/calendar.png">
             </div>
         </div>
     </div>
