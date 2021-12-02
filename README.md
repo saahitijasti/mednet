@@ -3,8 +3,8 @@
 To start the app run:
 
 ```
-export FLASK_APP=main.py
-set FLASK_APP=main.py
+export FLASK_APP=server.py
+set FLASK_APP=server.py
 flask run
 ```
 
