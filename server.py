@@ -15,7 +15,13 @@ posts = [
 
 doctors = {
     "Dr. Martha Kim" : {
-        "mutual_friends": 35, "mutual_doctors": 2, "attributes": ["Dermatology", "WOC", "holistic"]
+        "mutual_friends": 35, "mutual_doctors": 2, "attributes": ["Dermatology", "WOC", "holistic"], "accepting_patients": True
+    },
+    "Anne Pepper, M.D.": {
+        "mutual_friends": 23, "mutual_doctors": 3, "attributes": ["Dermatology", "Calm"], "accepting_patients": False
+    },
+    "Dr. McStuffins, M.D.": {
+        "mutual_friends": 15, "mutual_doctors": 0, "attributes": ["Dermatology", "Straight-Forward"], "accepting_patients": False
     }
 }
 
@@ -47,6 +53,7 @@ def landing():
 
 @app.route('/doctor_matches')
 def doctor_matches():
-    return render_template("doctor_matches.html", doctors=doctors)
+    print(list(doctors.keys()))
+    return render_template("doctor_matches.html", doctors=doctors, doctor_names=list(doctors.keys()))
 
 

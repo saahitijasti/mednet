@@ -14,6 +14,30 @@ html {
     text-align: center;
 }
 
+.search-bar {
+    width: 330px;
+    color: black;
+}
+
+.topbar-right {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.grey-box {
+    height: 46px;
+    background-color: #E5E5E5;
+    border-radius: 40px;
+    border-width: 0px;
+    color: black;
+}
+
+.vertical-center {
+    top: 50%;
+    -webkit-transform:translateY(-50%);
+    transform: translateY(-50%);
+}
+
 .content {
     background-color: #E2EDF3;
     height: 100%;
@@ -37,8 +61,72 @@ html {
 .doctor_matches {
     width: 618px;
     height: 74px;
-    background-color: #4BB4EF;
+    background-color: #AADCF7;
     font-size: 30px;
     text-align: center;
     margin: auto auto;
+    border-radius: 10px;
+    line-height: 74px;
+}
+
+.box {
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #C7C7C7;
+    border-radius: 10px;
+    border-collapse: separate; 
+}
+
+.link {
+    align-items: center;
+    width: 746;
+    height: 167;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.link-left {
+    width: 452;
+    height: 167;
+    padding: 15px 30px 15px 30px;
+    display: flex;
+}
+
+.link-right {
+    width: 294;
+    height: 167;
+    background-color: #AADCF7;
+    border-top-right-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+}
+
+.link-info {
+    display: flex;
+    font-size: 20px;
+    color: #7D7D7D;
+    margin-left: 20px;
+}
+
+.link-attribute {
+    font-size: 25px;
+    display: flex;
+    margin-left: 15px;
+    line-height: 45px;
+}
+
+.link-doctor {
+    font-size: 35px;
+    margin-left: 20px;
+}
+
+.vertical-center-new {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.shift-down {
+    margin-top: 15px;
 }
