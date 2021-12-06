@@ -25,6 +25,17 @@ doctors = {
     }
 }
 
+my_groups = [
+    {"name": "WOC", "members": 1280, "friends": 18, "image": "woc.jpeg"},
+    {"name": "South Asian", "members": 5321, "friends": 42, "image": "southasian.png"},
+    {"name": "Anxiety", "members": 10384, "friends": 9, "image": "anxiety.jpeg"},
+    {"name": "Student", "members": 9421, "friends": 53, "image": "student.jpeg"}
+]
+
+discover_groups = [
+    {"name": "Latinx", "members": 9421, "friends": 53, "image": "latinx.jpeg"},
+    {"name": "Chicago", "members": 496, "friends": 2, "image": "chicago.png"}
+]
 
 # routes
 @app.route('/')
@@ -53,7 +64,11 @@ def landing():
 
 @app.route('/doctor_matches')
 def doctor_matches():
-    print(list(doctors.keys()))
     return render_template("doctor_matches.html", doctors=doctors, doctor_names=list(doctors.keys()))
+
+@app.route('/search_groups')
+def search_groups():
+    return render_template("search_groups.html", my_groups=my_groups, discover_groups=discover_groups)
+
 
 
