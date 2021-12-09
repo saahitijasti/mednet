@@ -25,7 +25,7 @@ html {
 }
 
 .grey-box {
-    height: 46px;
+    min-height: 46px;
     background-color: #E5E5E5;
     border-radius: 40px;
     border-width: 0px;
@@ -169,4 +169,10 @@ html {
     margin-left: 15px;
 }
 
+.doctors-background {
+    width: 976;
+    height: max-content;
+    margin: auto auto;
+    margin-top: 20px;
+}
 
