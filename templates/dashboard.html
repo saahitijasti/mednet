@@ -1,5 +1,5 @@
 <html>
-    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/search_groups.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/dashboard.css') }}">
 
 <body>
     <div class="topbar space-evenly">
@@ -19,23 +19,13 @@
             </div>
         </div>
     </div>
-
-    <hr class="hline">
-
     <div class="content">
-        <div class="top-image"><img src="/static/images/community.png"></div>
-        <div class="doctor_matches">
-            <div class="vertical-center-new">Discover Groups</div>
-        </div>
         <div class="inner-content">
-            <div class="box right-content">
-                <input type="text" placeholder="Search.." class="group-search grey-box">
-                <div class="drop-down-list">
-                    <img src="/static/images/list.png" height="50">
-                    <div class="drop-down-text vertical-center-new">Location &or; Ethnicity &or; Condition &or; Sex/Gender &or; Pregnancy &or; </div>
-                </div>
-                <div id="discover-group-list">
-                    {% for group in discover_groups %}
+            <div class="box left-content">
+                <div class="group-box-title">My Groups</div>
+                <input type="text" placeholder="Search.." class="group-search grey-box vertical-center">
+                <div id="my-group-list">
+                    {% for group in my_groups %}
                         <div id="group" class="box link space-evenly">
                             <div class="link-left">
                                 <img src="/static/images/{{group.image}}" height="132" width="136">
@@ -52,18 +42,17 @@
                                         <div> &nbsp; {{group.friends}} friends are members</div>
                                     </div>
                                 </div>
-                                <div class="join-group-box">
-                                    <img src="/static/images/join-group.png" height="61" width="61"><br>
-                                    join group
+                                <div class="leave-group-box">
+                                    <img src="/static/images/leave-group.png" height="61" width="61">
+                                    leave group
                                 </div>
                             </div>
                         </div>                
                     {% endfor %}
-                    <img src="/static/images/pagination.png" height="40">
                 </div>
             </div>
         </div>
-
     </div>
 </body>
+
 </html>

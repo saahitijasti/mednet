@@ -24,13 +24,6 @@ html {
     margin-right: 10px;
 }
 
-.grey-box {
-    height: 46px;
-    background-color: #E5E5E5;
-    border-radius: 40px;
-    border-width: 0px;
-    color: black;
-}
 
 .vertical-center {
     top: 50%;
@@ -40,16 +33,15 @@ html {
 
 .content {
     background-color: #E2EDF3;
-    height: max-content;
+    height: 100%;
     width: 100%;
 }
 
 .inner-content {
     padding-top: 50px;
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-bottom: 50px;
-    height: max-content;
+    margin-right: 50px;
+    margin-left: 50px;
+    height: 100%;
     background-color: #E2EDF3;
 }
 
@@ -67,53 +59,9 @@ html {
     border-collapse: separate; 
 }
 
-.page-title {
-    height: 90px;
-    font-size: 36px;
-    color: black;
-    background-color: white;
-    border-color: #C7C7C7;
-    border-style: solid;
-    border-width: 1px;
-    line-height: 90px;
-    padding-left: 40px;
-}
-
 .vertical-center-new {
     margin-top: auto;
     margin-bottom: auto;
-}
-
-.top-image {
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    width: 100%;
-    margin: auto auto;
-}
-
-.center {
-    margin: auto auto;
-}
-
-.left-content {
-    width: 650px;
-    text-align: center;
-    height: max-content;
-    padding-bottom: 20px;
-}
-
-.right-content {
-    width: 976;
-    height: max-content;
-    vertical-align: top;
-    text-align: center;
-    padding-bottom: 20px;
-    margin: auto auto;
-}
-
-.hline {
-    border: 1px solid #C7C7C7;
 }
 
 .group-box-title {
@@ -124,7 +72,7 @@ html {
 }
 
 .group-search {
-    width: 816;
+    width: 544px;
     height: 46px;
     margin-top: 20px;
     margin-bottom: 20x;
@@ -133,7 +81,7 @@ html {
 
 .link {
     align-items: center;
-    width: 741;
+    width: 586;
     height: 133;
     margin-left: auto;
     margin-right: auto;
@@ -209,28 +157,4 @@ html {
 
 .shift-down {
     margin-top: 10px;
-}
-
-.doctor_matches {
-    width: 618px;
-    height: 74px;
-    background-color: #AADCF7;
-    font-size: 30px;
-    text-align: center;
-    margin: auto auto;
-    border-radius: 10px;
-    line-height: 74px;
-    margin-top: 20px;
-}
-
-.drop-down-list {
-    width: 600px;
-    margin: auto auto;
-    display: flex;
-    margin-top: 20px;
-}
-
-.drop-down-text {
-    font-size: 18px;
-    color: #7D7D7D;
 }

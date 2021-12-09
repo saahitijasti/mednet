@@ -34,7 +34,10 @@ my_groups = [
 
 discover_groups = [
     {"name": "Latinx", "members": 9421, "friends": 53, "image": "latinx.jpeg"},
-    {"name": "Chicago", "members": 496, "friends": 2, "image": "chicago.png"}
+    {"name": "Chicago", "members": 496, "friends": 2, "image": "chicago.png"},
+    {"name": "Expecting Mothers", "members": 102, "friends": 0, "image": "pregnant.jpeg"},
+    {"name": "Transgender", "members": 58, "friends": 1, "image": "transgender.jpeg"},
+    {"name": "Teachers", "members": 12578, "friends": 22, "image": "teachers.jpeg"}
 ]
 
 # routes
@@ -69,6 +72,14 @@ def doctor_matches():
 @app.route('/search_groups')
 def search_groups():
     return render_template("search_groups.html", my_groups=my_groups, discover_groups=discover_groups)
+
+@app.route('/explore')
+def explore():
+    return render_template("explore.html", posts=posts, doctors=doctors)
+
+@app.route('/dashboard')
+def dashboard():
+    return render_template("dashboard.html", my_groups=my_groups)
 
 
 

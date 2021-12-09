@@ -23,46 +23,48 @@
     <div class="content">
         <div class="inner-content">
             <div class="doctor_matches">
-                <div class="vertical-center-new">Doctor Matches</div>
+                <div class="vertical-center-new">Doctor Matches:</div>
             </div>
-            <div class="drop-down-list">
-                <img src="/static/images/list.png" height="50">
-                <div class="drop-down-text vertical-center-new">Patient Group &or; Care Style &or; Insurance &or; Medication &or; Ratings &or; </div>
-            </div>
-            <div id="doctor-list">
-                {% for doctor in doctor_names %}
-                    <div id="link" class="box link space-evenly">
-                        <div class="link-left">
-                            <div class="vertical-center-new">
-                                <img src="/static/images/doctor-profile.png" height="80">
-                            </div>
-                            <div class="vertical-center-new">
-                                <div class="link-doctor">{{doctor}}</div>
-                                {% if doctors[doctor].accepting_patients %}
-                                    <div class="accepting-banner">accepting patients</div>
-                                {% else %}
-                                    <div class="not-accepting-banner">notify when available</div>
-                                {% endif %}
-                                <div class="link-info">
-                                    <div>{{doctors[doctor].mutual_friends}} mutual friends</div>
+            <div class="box doctors-background">
+                <div class="drop-down-list">
+                    <img src="/static/images/list.png" height="50">
+                    <div class="drop-down-text vertical-center-new">Patient Group &or; Care Style &or; Insurance &or; Medication &or; Ratings &or; </div>
+                </div>
+                <div id="doctor-list">
+                    {% for doctor in doctor_names %}
+                        <div id="link" class="box link space-evenly">
+                            <div class="link-left">
+                                <div class="vertical-center-new">
+                                    <img src="/static/images/doctor-profile.png" height="80">
                                 </div>
-                                <div class="link-info">
-                                    <div>{{doctors[doctor].mutual_doctors}} mutual doctors</div>
+                                <div class="vertical-center-new">
+                                    <div class="link-doctor">{{doctor}}</div>
+                                    {% if doctors[doctor].accepting_patients %}
+                                        <div class="accepting-banner">accepting patients</div>
+                                    {% else %}
+                                        <div class="not-accepting-banner">notify when available</div>
+                                    {% endif %}
+                                    <div class="link-info">
+                                        <div>{{doctors[doctor].mutual_friends}} mutual friends</div>
+                                    </div>
+                                    <div class="link-info">
+                                        <div>{{doctors[doctor].mutual_doctors}} mutual doctors</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="link-right">
-                            <div class="shift-down">
-                                {% for att in doctors[doctor].attributes %}
-                                <div class="link-attribute">
-                                    <img src="/static/images/{{att}}.png" height="30"> &nbsp;
-                                    <div class="vertical-center-new">{{att}}</div>
+                            <div class="link-right">
+                                <div class="shift-down">
+                                    {% for att in doctors[doctor].attributes %}
+                                    <div class="link-attribute">
+                                        <img src="/static/images/{{att}}.png" height="30"> &nbsp;
+                                        <div class="vertical-center-new">{{att}}</div>
+                                    </div>
+                                    {% endfor %}
                                 </div>
-                                {% endfor %}
                             </div>
-                        </div>
-                    </div>                
-                {% endfor %}
+                        </div>                
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
