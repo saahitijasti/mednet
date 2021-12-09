@@ -40,6 +40,20 @@ discover_groups = [
     {"name": "Teachers", "members": 12578, "friends": 22, "image": "teachers.jpeg"}
 ]
 
+top_contributors = ["Jane Doe", "Tom Ross", "Xavier Nakasaki"]
+
+top_doctors = {
+    "Maria Lee M.D." : {
+        "mutual_friends": 18, "mutual_doctors": 5, "attributes": ["Dermatology", "WOC", "holistic"], "place": 1
+    },
+    "Rose Carl M.D.": {
+        "mutual_friends": 23, "mutual_doctors": 3, "attributes": ["Pediatric", "WOC", "Straight-Forward"], "place": 2
+    },
+    "Kim Jones D.D.S": {
+        "mutual_friends": 15, "mutual_doctors": 0, "attributes": ["Orthodontics", "WOC"], "place": 3
+    }
+}
+
 # routes
 @app.route('/')
 def index():
@@ -75,7 +89,7 @@ def search_groups():
 
 @app.route('/explore')
 def explore():
-    return render_template("explore.html", posts=posts, doctors=doctors)
+    return render_template("explore.html", posts=posts, doctors=doctors, top_doctors=top_doctors, doctor_names=list(top_doctors.keys()), top_contributors=top_contributors)
 
 @app.route('/dashboard')
 def dashboard():

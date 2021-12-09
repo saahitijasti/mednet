@@ -89,7 +89,69 @@
                     {% endfor %}
                 </div>
                 <div>
-                    Right side goes here
+                    <div class="box top-contributors">
+                        <div class="top-title ">Top Contributors</div>
+                        <hr class="hline">
+                        {% for person in top_contributors %}
+                            <div class="cont-row">
+                                <div class="doctor-rank">{{loop.index}}.</div>
+                                <div id="contributor" class="box contributor space-evenly">
+                                    <div class="doctor-row">
+                                        <img src="/static/images/profile.png" height="30" class="vertical-center-new">
+                                        <div class="vertical-center-new">{{person}}</div>
+                                    </div>
+                                    <div id="link-right">
+                                        fire
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <hr class="hline">
+                        <div class="see-all">
+                            See All &or;
+                        </div>
+                    </div>
+                    <div class="box top-doctors">
+                        <div class="top-title ">Top Rated Doctors</div>
+                        <hr class="hline">
+                        {% for doctor in doctor_names %}
+                            <div class="doctor-row">
+                                <div class="doctor-rank">{{top_doctors[doctor].place}}.</div>
+                                <div id="link" class="box link space-evenly">
+                                    <div class="link-left space-evenly">
+                                        <div class="vertical-center-new">
+                                            <img src="/static/images/doctor-profile.png" height="50">
+                                        </div>
+                                        <div class="vertical-center-new">
+                                            <div class="link-doctor">{{doctor}}</div>
+                                            <div class="link-info">
+                                                <img src="/static/images/heart.png" width="20">
+                                                <div> &nbsp; {{top_doctors[doctor].mutual_friends}} mutual friends</div>
+                                            </div>
+                                            <div class="link-info">
+                                                <img src="/static/images/plus.png" width="20">
+                                                <div> &nbsp; {{top_doctors[doctor].mutual_doctors}} mutual doctors</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="link-right">
+                                        <div class="shift-down">
+                                            {% for att in top_doctors[doctor].attributes %}
+                                            <div class="link-attribute">
+                                                <img src="/static/images/{{att}}.png" height="22"> &nbsp;
+                                                <div class="vertical-center-new">{{att}}</div>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        <hr class="hline">
+                        <div class="see-all">
+                            See All &or;
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
