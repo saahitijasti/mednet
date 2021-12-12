@@ -26,6 +26,35 @@ doctors = {
     }
 }
 
+my_groups = [
+    {"name": "WOC", "members": 1280, "friends": 18, "image": "woc.jpeg"},
+    {"name": "South Asian", "members": 5321, "friends": 42, "image": "southasian.png"},
+    {"name": "Anxiety", "members": 10384, "friends": 9, "image": "anxiety.jpeg"},
+    {"name": "Student", "members": 9421, "friends": 53, "image": "student.jpeg"}
+]
+
+discover_groups = [
+    {"name": "Latinx", "members": 9421, "friends": 53, "image": "latinx.jpeg"},
+    {"name": "Chicago", "members": 496, "friends": 2, "image": "chicago.png"},
+    {"name": "Expecting Mothers", "members": 102, "friends": 0, "image": "pregnant.jpeg"},
+    {"name": "Transgender", "members": 58, "friends": 1, "image": "transgender.jpeg"},
+    {"name": "Teachers", "members": 12578, "friends": 22, "image": "teachers.jpeg"}
+]
+
+top_contributors = ["Jane Doe", "Tom Ross", "Xavier Nakasaki"]
+
+top_doctors = {
+    "Maria Lee M.D." : {
+        "mutual_friends": 18, "mutual_doctors": 5, "attributes": ["Dermatology", "WOC", "holistic"], "place": 1
+    },
+    "Rose Carl M.D.": {
+        "mutual_friends": 23, "mutual_doctors": 3, "attributes": ["Pediatric", "WOC", "Straight-Forward"], "place": 2
+    },
+    "Kim Jones D.D.S": {
+        "mutual_friends": 15, "mutual_doctors": 0, "attributes": ["Orthodontics", "WOC"], "place": 3
+    }
+}
+
     
 # routes
 @app.route('/')
@@ -60,6 +89,10 @@ def profiles1():
 def profiles2():
     return render_template("varicella.html")
 
+@app.route('/explore')
+def explore():
+    return render_template("explore.html", posts=posts, doctors=doctors, top_doctors=top_doctors, doctor_names=list(top_doctors.keys()), top_contributors=top_contributors)
+    
 @app.route('/visitors_profile')
 def visitors_profile():
     return render_template("visitors_profile.html")
