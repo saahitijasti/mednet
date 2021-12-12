@@ -25,7 +25,7 @@ html {
 }
 
 .grey-box {
-    min-height: 46px;
+    height: 46px;
     background-color: #E5E5E5;
     border-radius: 40px;
     border-width: 0px;
@@ -120,7 +120,6 @@ html {
 .link-doctor {
     font-size: 35px;
     margin-left: 20px;
-    text-align: left;
 }
 
 .vertical-center-new {
@@ -131,48 +130,3 @@ html {
 .shift-down {
     margin-top: 15px;
 }
-
-.drop-down-list {
-    width: 600px;
-    margin: auto auto;
-    display: flex;
-    margin-top: 20px;
-}
-
-.drop-down-text {
-    font-size: 18px;
-    color: #7D7D7D;
-}
-
-.accepting-banner {
-    width: 260px;
-    height: 32px;
-    color: black;
-    background-color: #C5DCC7;
-    border-radius: 15px;
-    font-size: 25px;
-    text-align: center;
-    line-height: 32px;
-    margin-left: 15px;
-}
-
-.not-accepting-banner {
-    width: 260px;
-    height: 32px;
-    color: black;
-    background-color: #FF6A56;
-    border-radius: 15px;
-    font-size: 25px;
-    text-align: center;
-    line-height: 32px;
-    box-shadow: 2px;
-    margin-left: 15px;
-}
-
-.doctors-background {
-    width: 976;
-    height: max-content;
-    margin: auto auto;
-    margin-top: 20px;
-}
-
