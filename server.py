@@ -67,7 +67,7 @@ def login():
 
 @app.route('/loginaction', methods=['POST'])
 def login_action():
-    return redirect(url_for('landing'))
+    return redirect(url_for('explore'))
 
 @app.route('/createaccount')
 def createaccount():
@@ -75,7 +75,7 @@ def createaccount():
 
 @app.route('/addnewuseraction', methods=['POST'])
 def addnewuser():
-    return redirect(url_for('landing'))
+    return redirect(url_for('explore'))
 
 @app.route('/landing')
 def landing():
@@ -92,7 +92,7 @@ def profiles2():
 @app.route('/explore')
 def explore():
     return render_template("explore.html", posts=posts, doctors=doctors, top_doctors=top_doctors, doctor_names=list(top_doctors.keys()), top_contributors=top_contributors)
-    
+
 @app.route('/visitors_profile')
 def visitors_profile():
     return render_template("visitors_profile.html")
@@ -100,6 +100,7 @@ def visitors_profile():
 @app.route('/dashboard')
 def dashboard_page():
     return render_template("dashboard.html")
+
 @app.route('/explore')
 def explor_page():
     return render_template("explore.html", posts=posts, doctors=doctors)
