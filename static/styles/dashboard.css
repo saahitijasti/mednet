@@ -1,160 +1,65 @@
-html {
-    font-size: 16px;
-    font-family: Roboto, sans-serif;
+@import "./common/index.css";
+@import "./components/topbar.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-.topbar {
-    background-color: white;
-    height: 70;
-    width: 100%;
-}
-
-.small-font {
-    font-size: 8px;
-    text-align: center;
-}
-
-.search-bar {
-    width: 330px;
-    color: black;
-}
-
-.topbar-right {
-    margin-top: 10px;
-    margin-right: 10px;
-}
-
-
-.vertical-center {
-    top: 50%;
-    -webkit-transform:translateY(-50%);
-    transform: translateY(-50%);
+body {
+  background-color: #e2edf3;
 }
 
 .content {
-    background-color: #E2EDF3;
-    height: 100%;
-    width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.content > :first-child {
+  width: 50%;
+}
+.content > :nth-child(2) {
+  width: 40%;
+}
+.profile-info {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  margin-bottom: 20px;
 }
 
-.inner-content {
-    padding-top: 50px;
-    margin-right: 50px;
-    margin-left: 50px;
-    height: 100%;
-    background-color: #E2EDF3;
+.profile-info .user-name {
+  grid-column: span 3;
+  font-size: 3rem;
+}
+.profile-info img:not(:first-child) {
+  align-self: center;
+}
+.profile-info img:first-child {
+  justify-self: center;
+  grid-row: span 2;
+}
+.friend img {
+  height: 50px;
 }
 
-.space-evenly {
-    display: flex;
-    justify-content: space-between;
+.schedule img {
+  margin-top: 20px;
 }
 
-.box {
-    background-color: white;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #C7C7C7;
-    border-radius: 10px;
-    border-collapse: separate; 
+#my-groups,
+#my-friends,
+#my-doctors {
+  background-color: rgba(255, 0, 0, 0);
+  padding: 0;
+  margin-top: 20px;
+  position: relative;
 }
 
-.vertical-center-new {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.group-box-title {
-    text-align: center;
-    font-size: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.group-search {
-    width: 544px;
-    height: 46px;
-    margin-top: 20px;
-    margin-bottom: 20x;
-}
-
-
-.link {
-    align-items: center;
-    width: 586;
-    height: 133;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.link-left {
-    width: 136;
-    height: 100%;
-    border-color: #C7C7C7;
-    border-width: 1px;
-    border-style: solid;
-    border-top-left-radius: 10px 10px;
-    border-bottom-left-radius: 10px 10px;
-}
-
-.link-right {
-    margin-left: 30px;
-    width: 100%;
-}
-
-.link-info {
-    display: flex;
-    font-size: 17px;
-    color: #7D7D7D;
-}
-
-.link-attribute {
-    font-size: 25px;
-    display: flex;
-    margin-left: 15px;
-    line-height: 45px;
-}
-
-.link-doctor {
-    font-size: 30px;
-    text-align: left;
-}
-
-.vertical-center-new {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.leave-group-box {
-    width: 102px;
-    height: 97px;
-    background-color: #AADCF7;
-    text-align: center;
-    align-items: center;
-    margin-right: 20px;
-    margin-top: auto;
-    margin-bottom: auto;
-    border-radius: 15px;
-    border-color: #C7C7C7;
-    border-width: 1px;
-    border-style: solid;
-}
-
-.join-group-box {
-    width: 102px;
-    height: 97px;
-    color: #4C8EAA;
-    background-color: #E5E5E5;
-    text-align: center;
-    align-items: center;
-    margin-right: 20px;
-    margin-top: auto;
-    margin-bottom: auto;
-    border-radius: 15px;
-}
-
-.shift-down {
-    margin-top: 10px;
+.find-groups-btn {
+  position: absolute;
+  right: 7%;
+  top: 2.5%;
+  width: 20%;
 }
