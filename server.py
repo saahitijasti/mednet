@@ -9,8 +9,9 @@ app = Flask(__name__, template_folder=tmpl_dir)
 # data
 posts = [
     {"name": "Influenza Smith", "attributes": ["WOC"], "connection": "2nd", "text": "I had a really great experience with Dr. Kim, who is a woman of color like myself. She took really great care of my skin and adressed problems specific to my skin type. On top of that, she knows and understands problems that people of my ethnic background face. I definitely feel comfortable entrusting her with my health!", \
-        "link": "Dr. Martha Kim"},
-    {"name": "Varicella Shah", "attributes": ["anxiety", "South Asian"], "connection": "1st", "text": "I want to spread the word about BetterHelp. I have been struggling with my anxiety as of late, and I wanted to find a therapist that is  South Asian, like myself. I had such great luck with this platform in finding someone who understands my cultural context. High recommend to anyone seeking out affordable counseling!"}
+        "link": "Dr. Martha Kim", "profile_link": "influenza-smith"},
+    {"name": "Varicella Shah", "attributes": ["anxiety", "South Asian"], "connection": "1st", "text": "I want to spread the word about BetterHelp. I have been struggling with my anxiety as of late, and I wanted to find a therapist that is  South Asian, like myself. I had such great luck with this platform in finding someone who understands my cultural context. High recommend to anyone seeking out affordable counseling!", \
+    "profile_link": "varicella-shah"}
 ]
 
 doctors = {
@@ -25,21 +26,7 @@ doctors = {
     }
 }
 
-my_groups = [
-    {"name": "WOC", "members": 1280, "friends": 18, "image": "woc.jpeg"},
-    {"name": "South Asian", "members": 5321, "friends": 42, "image": "southasian.png"},
-    {"name": "Anxiety", "members": 10384, "friends": 9, "image": "anxiety.jpeg"},
-    {"name": "Student", "members": 9421, "friends": 53, "image": "student.jpeg"}
-]
-
-discover_groups = [
-    {"name": "Latinx", "members": 9421, "friends": 53, "image": "latinx.jpeg"},
-    {"name": "Chicago", "members": 496, "friends": 2, "image": "chicago.png"},
-    {"name": "Expecting Mothers", "members": 102, "friends": 0, "image": "pregnant.jpeg"},
-    {"name": "Transgender", "members": 58, "friends": 1, "image": "transgender.jpeg"},
-    {"name": "Teachers", "members": 12578, "friends": 22, "image": "teachers.jpeg"}
-]
-
+    
 # routes
 @app.route('/')
 def index():
@@ -65,21 +52,26 @@ def addnewuser():
 def landing():
     return render_template("landing.html", posts=posts, doctors=doctors)
 
-@app.route('/doctor_matches')
-def doctor_matches():
-    return render_template("doctor_matches.html", doctors=doctors, doctor_names=list(doctors.keys()))
+@app.route('/profiles/influenza-smith')
+def profiles1():
+    return render_template("influenza.html")
 
-@app.route('/search_groups')
-def search_groups():
-    return render_template("search_groups.html", my_groups=my_groups, discover_groups=discover_groups)
+@app.route('/profiles/varicella-shah')
+def profiles2():
+    return render_template("varicella.html")
 
-@app.route('/explore')
-def explore():
-    return render_template("explore.html", posts=posts, doctors=doctors)
+@app.route('/visitors_profile')
+def visitors_profile():
+    return render_template("visitors_profile.html")
 
 @app.route('/dashboard')
-def dashboard():
-    return render_template("dashboard.html", my_groups=my_groups)
+def dashboard_page():
+    return render_template("dashboard.html")
+@app.route('/explore')
+def explor_page():
+    return render_template("explore.html", posts=posts, doctors=doctors)
 
-
-
+@app.route('/doctor_matches')
+def doctor_matches():
+    print(list(doctors.keys()))
+    return render_template("doctor_matches.html", doctors=doctors, doctor_names=list(doctors.keys()))
