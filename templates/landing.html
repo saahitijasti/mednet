@@ -68,7 +68,7 @@
                 <div class="box">
                     <div class="author inner-post-content">
                         <img src="/static/images/grey_profile.png" height="50">
-                        <div> &nbsp; {{post.name}} &nbsp; &bull; </div>
+                        <div><a href="/profiles/{{post.profile_link}}" target="_blank">&nbsp; {{post.name}} &nbsp; &bull; </a> </div>
                         {% for att in post.attributes %}
                             <div class="post-attributes"> &nbsp; {{att}} &bull; </div>
                         {% endfor %}
@@ -84,7 +84,7 @@
                                         <img src="/static/images/doctor-profile.png" height="50">
                                     </div>
                                     <div class="vertical-center-new">
-                                        <div class="link-doctor">{{post.link}}</div>
+                                        <div class="link-doctor"><a href="/visitors_profile" target="_blank">{{post.link}}</a></div>
                                         <div class="link-info">
                                             <img src="/static/images/heart.png" width="20">
                                             <div> &nbsp; {{doctors[post.link].mutual_friends}} mutual friends</div>
