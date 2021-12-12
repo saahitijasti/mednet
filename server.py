@@ -67,7 +67,7 @@ def login():
 
 @app.route('/loginaction', methods=['POST'])
 def login_action():
-    return redirect(url_for('explore'))
+    return redirect(url_for('dashboard_page'))
 
 @app.route('/createaccount')
 def createaccount():
@@ -75,7 +75,7 @@ def createaccount():
 
 @app.route('/addnewuseraction', methods=['POST'])
 def addnewuser():
-    return redirect(url_for('explore'))
+    return redirect(url_for('dashboard_page'))
 
 @app.route('/landing')
 def landing():
