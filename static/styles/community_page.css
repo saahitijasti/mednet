@@ -409,3 +409,8 @@ html {
     display: block;
     margin: auto;
 }
+
+a:link {
+    color:black;
+    text-decoration: none;
+  }
