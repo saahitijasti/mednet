@@ -54,15 +54,13 @@
                                             <img src="/static/images/doctor-profile.png" height="50">
                                         </div>
                                         <div class="vertical-center-new">
-                                            <div class="link-doctor">{{post.link}}</div>
-                                            <div class="link-info">
-                                                <img src="/static/images/heart.png" width="20">
-                                                <div> &nbsp; {{doctors[post.link].mutual_friends}} mutual friends</div>
-                                            </div>
-                                            <div class="link-info">
-                                                <img src="/static/images/plus.png" width="20">
-                                                <div> &nbsp; {{doctors[post.link].mutual_doctors}} mutual doctors</div>
-                                            </div>
+                                            <a class="a:link" href=/visitors_profile>
+                                                <div class="link-doctor">{{post.link}}</div>
+                                                <div class="link-info">
+                                                    <img src="/static/images/heart.png" width="20">
+                                                    <div> &nbsp; {{doctors[post.link].mutual_friends}} mutual friends</div>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="link-right">
@@ -133,10 +131,6 @@
                                             <div class="link-info">
                                                 <img src="/static/images/heart.png" width="20">
                                                 <div> &nbsp; {{top_doctors[doctor].mutual_friends}} mutual friends</div>
-                                            </div>
-                                            <div class="link-info">
-                                                <img src="/static/images/plus.png" width="20">
-                                                <div> &nbsp; {{top_doctors[doctor].mutual_doctors}} mutual doctors</div>
                                             </div>
                                         </div>
                                     </div>

@@ -593,7 +593,7 @@ body {
 }
 
 .doc-info {
-    margin: auto auto auto 20;
+    margin: auto auto auto 10;
     height: 23px;
     display: flex;
 }
