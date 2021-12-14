@@ -156,6 +156,7 @@ html {
     display: flex;
     font-size: 15px;
     color: #7D7D7D;
+    margin-left: 10px;
 }
 
 .link-attribute {
@@ -167,6 +168,7 @@ html {
 
 .link-doctor {
     font-size: 25px;
+    margin-left: 10px;
 }
 
 .vertical-center-new {
@@ -236,4 +238,9 @@ html {
     display: flex;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+a:link {
+    color:black;
+    text-decoration: none;
 }

@@ -9,9 +9,9 @@ app = Flask(__name__, template_folder=tmpl_dir)
 # data
 posts = [
     {"name": "Influenza Smith", "attributes": ["WOC"], "connection": "2nd", "text": "I had a really great experience with Dr. Kim, who is a woman of color like myself. She took really great care of my skin and adressed problems specific to my skin type. On top of that, she knows and understands problems that people of my ethnic background face. I definitely feel comfortable entrusting her with my health!", \
-        "link": "Dr. Martha Kim", "profile_link": "influenza-smith"},
+        "link": "Dr. Martha Kim", "profile_link": "influenza-smith", "poster": "/profiles/influenza-smith"},
     {"name": "Varicella Shah", "attributes": ["anxiety", "South Asian"], "connection": "1st", "text": "I want to spread the word about BetterHelp. I have been struggling with my anxiety as of late, and I wanted to find a therapist that is  South Asian, like myself. I had such great luck with this platform in finding someone who understands my cultural context. High recommend to anyone seeking out affordable counseling!", \
-    "profile_link": "varicella-shah"}
+    "profile_link": "varicella-shah", "poster": "/profiles/varicella-shah"}
 ]
 
 doctors = {
@@ -50,7 +50,7 @@ top_doctors = {
     "Rose Carl M.D.": {
         "mutual_friends": 23, "mutual_doctors": 3, "attributes": ["Pediatric", "WOC", "Straight-Forward"], "place": 2
     },
-    "Kim Jones D.D.S": {
+    "Dr. Kim Jones": {
         "mutual_friends": 15, "mutual_doctors": 0, "attributes": ["Orthodontics", "WOC"], "place": 3
     }
 }
@@ -99,7 +99,15 @@ def visitors_profile():
 
 @app.route('/dashboard')
 def dashboard_page():
-    return render_template("dashboard.html")
+    return render_template("dashboard.html", my_groups=my_groups)
+
+@app.route('/patient_profile')
+def patient_profile():
+    return render_template("patient_profile.html")
+
+@app.route('/community_page')
+def community_page():
+    return render_template("community_page.html")
 
 @app.route('/explore')
 def explor_page():
@@ -109,3 +117,8 @@ def explor_page():
 def doctor_matches():
     print(list(doctors.keys()))
     return render_template("doctor_matches.html", doctors=doctors, doctor_names=list(doctors.keys()))
+
+
+@app.route('/search_groups')
+def search_groups():
+    return render_template("search_groups.html", my_groups=my_groups, discover_groups=discover_groups)
