@@ -274,3 +274,8 @@ html {
   width: 330px;
   margin-left: 170px;
 }
+
+a:link {
+  color:black;
+  text-decoration: none;
+}
