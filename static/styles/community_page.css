@@ -204,7 +204,7 @@ html {
 }
 
 .doc-info {
-    margin: auto auto auto 30;
+    margin: 10 auto auto 30;
     height: 23px;
     display: flex;
 }
@@ -369,6 +369,7 @@ html {
 .sm-doc-info {
     height: 18px;
     display: flex;
+    margin-top:10;
 }
 
 .kim-attributes {
