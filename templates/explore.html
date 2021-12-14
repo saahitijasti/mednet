@@ -79,10 +79,13 @@
                             {% endif %}
                         </div>
                         <hr class="hline">
-                        <div class="post-bottom">
-                            <img src="/static/images/like.png">
-                            <img src="/static/images/comment.png">
-                            <img src="/static/images/reshare.png">
+                        <div class="space-evenly">
+                            <div></div>
+                            <div class="post-bottom vertical-center-new">
+                                <img src="/static/images/upvote.png" height="20">
+                                <div> &nbsp; {{post.votes}} &nbsp; </div>
+                                <img src="/static/images/downvote.png" height="20">
+                            </div>
                         </div>
                     </div>
                     <br>
