@@ -35,10 +35,12 @@
                         <div id="link" class="box link space-evenly">
                             <div class="link-left">
                                 <div class="vertical-center-new">
-                                    <img src="/static/images/doctor-profile.png" height="80">
+                                    <img src="/static/images/doctor_icon.png" height="80">
                                 </div>
                                 <div class="vertical-center-new">
-                                    <div class="link-doctor">{{doctor}}</div>
+                                    <a href="/visitors_profile">
+                                        <div class="link-doctor">{{doctor}}</div>
+                                    </a>
                                     {% if doctors[doctor].accepting_patients %}
                                         <div class="accepting-banner">accepting patients</div>
                                     {% else %}

@@ -27,7 +27,7 @@
           <div class="small-font">Network</div>
         </div>
         <div class="profile-top-bar">
-          <a href="/patient_profile"><img src="/static/images/profile.png" height="35" /></a>
+          <a href="/patient_profile"><img src="/static/images//profile.png" height="35" /></a>
           <br />
           <div class="small-font">Profile</div>
         </div>
@@ -36,7 +36,7 @@
     <div class="content d-flex">
       <div class="">
         <div class="profile-info">
-          <img src="/static/images/profile.png" alt="" />
+          <img src="/static/images//profile.png" height="100" alt="" />
           <h1 class="user-name">Rubella's Dashboard</h1>
           <img src="/static/images//25complete.png" height="30" alt="" />
           <div class="find-groups-button vertical-center-new">
@@ -67,28 +67,30 @@
           <input type="text" placeholder="Search.." class="group-search grey-box vertical-center">
           <div id="my-group-list">
               {% for group in my_groups %}
-                  <div id="group" class="box link space-evenly">
-                      <div class="link-left">
-                          <img src="/static/images/{{group.image}}" height="132" width="136">
-                      </div>
-                      <div class="link-right space-evenly">
-                          <div class="vertical-center-new">
-                              <div class="link-doctor">{{group.name}}</div>
-                              <div class="link-info">
-                                  <img src="/static/images/network.png" width="25">
-                                  <div> &nbsp; {{group.members}} members</div>
-                              </div>
-                              <div class="link-info">
-                                  <img src="/static/images/heart.png" width="25">
-                                  <div> &nbsp; {{group.friends}} friends are members</div>
-                              </div>
-                          </div>
-                          <div class="leave-group-box">
-                              <img src="/static/images/leave-group.png" height="61" width="61">
-                              leave group
-                          </div>
-                      </div>
-                  </div>                
+                  <a href=/community_page>
+                    <div id="group" class="box link space-evenly">
+                        <div class="link-left">
+                            <img src="/static/images/{{group.image}}" height="132" width="136">
+                        </div>
+                        <div class="link-right space-evenly">
+                            <div class="vertical-center-new">
+                                <div class="link-doctor">{{group.name}}</div>
+                                <div class="link-info">
+                                    <img src="/static/images//network.png" height="17">
+                                    <div> &nbsp; {{group.members}} members</div>
+                                </div>
+                                <div class="link-info">
+                                    <img src="/static/images//heart.png" width="20">
+                                    <div> &nbsp; {{group.friends}} friends are members</div>
+                                </div>
+                            </div>
+                            <div class="leave-group-box">
+                                <img src="/static/images//leave-group.png" width="63">
+                                Leave Group
+                            </div>
+                        </div>
+                    </div>
+                  </a>                
               {% endfor %}
           </div>
       </div>
