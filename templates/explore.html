@@ -79,10 +79,10 @@
                         <hr class="hline">
                         <div class="space-evenly">
                             <div></div>
-                            <div class="post-bottom vertical-center-new">
-                                <img src="/static/images/upvote.png" height="20">
+                            <div class="post-bottom vote-center">
+                                <img src="/static/images/upvote.png" height="18">
                                 <div> &nbsp; {{post.votes}} &nbsp; </div>
-                                <img src="/static/images/downvote.png" height="20">
+                                <img src="/static/images/downvote.png" height="18">
                             </div>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                                         <div class="shift-down">
                                             {% for att in top_doctors[doctor].attributes %}
                                             <div class="link-attribute">
-                                                <img src="/static/images/{{att}}.png" height="22"> &nbsp;
+                                                <img src="/static/images/{{att}}.png" height="16"> &nbsp;
                                                 <div class="vertical-center-new">{{att}}</div>
                                             </div>
                                             {% endfor %}

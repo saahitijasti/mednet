@@ -132,7 +132,7 @@ html {
 .post-bottom {
     display: flex;
     margin-right: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .link {
@@ -175,7 +175,7 @@ html {
 }
 
 .link-doctor {
-    font-size: 25px;
+    font-size: 23px;
     margin-left: 10px;
 }
 
@@ -256,4 +256,9 @@ a:link {
 .bottom-padding {
     padding-bottom: 10px;
     padding-top: 10px;
+}
+
+.vote-center {
+    margin-top: auto;
+    margin-bottom: 10;
 }

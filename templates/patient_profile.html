@@ -68,11 +68,22 @@
                 <div class="profile-box">
                     <div class="profile-complete">Profile 100% Complete</div>
                     <div class="progress-bar"></div>
-                    <a href="/doctor_matches">
-                        <button style="background-color: #1F5C7E; border-radius: 15px; height: 55; width: 300; 
-                        margin: 20 auto auto auto; font-size: 20px; color:white; border-color: #1F5C7E;
-                        border-style: solid;" class="btn-find-docs">Find Doctors</button>
-                    </a>
+                    <button style="background-color: #1F5C7E; border-radius: 15px; height: 55; width: 300; 
+                    margin: 20 auto auto auto; font-size: 20px; color:white; border-color: #1F5C7E;
+                    border-style: solid; cursor: pointer;" class="btn-find-docs" onclick="myFunction()">Find Doctors</button>
+                    <div class="form-popup" id="d-match" style="display: none">
+                        <form action="/doctor_matches" class="form-container">
+                            <div><img class="exit" onclick="closeForm()" src="/static/images/fas.fa-plus.png"></div>
+                            <div class="popup-title">I want a(n)...</div>
+                            <input type="text" placeholder="Enter Speciality" class="search-bar grey-box vertical-center" >
+                        
+                            <div class="popup-title">who is...</div>
+                            <input type="text" placeholder="Enter Keyword" class="search-bar grey-box vertical-center">
+                                <button style="background-color: #1F5C7E; border-radius: 15px; height: 55; width: 300; 
+                                margin: 20 auto auto auto; font-size: 20px; color:white; border-color: #1F5C7E;
+                                border-style: solid; cursor: pointer;" onclick="location.href='/doctor_matches'" class="btn-find-docs">Find Doctors</button>
+                          </form>
+                    </div>
                 </div>
                 <div class="box pt-group-box">
                     <div class="box-title">Patient Groups</div>
@@ -201,6 +212,14 @@
             </div>
         </div>
     </div>
-    
+    <script>
+        function myFunction(event) {
+            document.getElementById("d-match").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("d-match").style.display = "none";
+        }
+      </script>
 </body>
 </html>

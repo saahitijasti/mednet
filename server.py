@@ -9,13 +9,13 @@ app = Flask(__name__, template_folder=tmpl_dir)
 # data
 posts = [
     {"name": "Influenza Smith", "attributes": ["WOC"], "connection": "2nd", "text": "I had a really great experience with Dr. Kim, who is a woman of color like myself. She took really great care of my skin and adressed problems specific to my skin type. On top of that, she knows and understands problems that people of my ethnic background face. I definitely feel comfortable entrusting her with my health!", \
-        "link": "Dr. Martha Kim", "profile_link": "influenza-smith", "poster": "/profiles/influenza-smith", "votes": 17},
+        "link": "Martha Kim, M.D.", "profile_link": "influenza-smith", "poster": "/profiles/influenza-smith", "votes": 17},
     {"name": "Varicella Shah", "attributes": ["WOC", "South Asian"], "connection": "1st", "text": "I want to spread the word about BetterHelp. I have been struggling with my anxiety as of late, and I wanted to find a therapist that is  South Asian, like myself. I had such great luck with this platform in finding someone who understands my cultural context. High recommend to anyone seeking out affordable counseling!", \
     "profile_link": "varicella-shah", "poster": "/profiles/varicella-shah", "votes": 15}
 ]
 
 doctors = {
-    "Dr. Martha Kim" : {
+    "Martha Kim, M.D." : {
         "mutual_friends": 35, "mutual_doctors": 2, "attributes": ["Dermatology", "WOC", "holistic"], "accepting_patients": True
     },
     "Anne Pepper, M.D.": {
@@ -50,7 +50,7 @@ top_doctors = {
     "Rose Carl M.D.": {
         "mutual_friends": 23, "mutual_doctors": 3, "attributes": ["Pediatric", "WOC", "Straight-Forward"], "place": 2
     },
-    "Dr. Kim Jones": {
+    "Kim Jones, D.O.": {
         "mutual_friends": 15, "mutual_doctors": 0, "attributes": ["Orthodontics", "WOC"], "place": 3
     }
 }
