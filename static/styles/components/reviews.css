@@ -10,8 +10,12 @@
 
 .review-container {
   background-color: white;
-  border-radius: 15px;
   width: 48%;
+  border-style: solid;
+  border-width: 1;
+  border-color: #7D7D7D;
+  border-radius: 10px;
+  border-collapse: separate;
 }
 
 .review-container .header {
@@ -43,12 +47,15 @@
 }
 
 .attached-profile {
-  border-radius: 15px;
+  border-radius: 10px;
   margin: auto;
-  border: 2px solid grey;
   width: 75%;
   display: flex;
   margin-top: 25px;
+  border-style: solid;
+  border-width: 1;
+  border-color: #7D7D7D;
+  border-collapse: separate;
 }
 
 .attached-profile > :first-child {
@@ -88,7 +95,11 @@
   grid-template-rows: 40px 40px 40px;
   align-content: center;
   justify-content: center;
+  border-top-right-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+  margin-left: 11px;
 }
+
 .attached-profile :nth-child(2) * {
   align-self: center;
   justify-self: center;
